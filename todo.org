@@ -1,0 +1,60 @@
+#+TITLE: Portfolio TODO
+#+AUTHOR: Matei Cloteaux
+
+A list of things I want to do with my portfolio site.
+The site will be similar esque to zen garden where I
+will have multiple presentations of the same content.
+The html will not necessarily be shared, but the words
+will be spread around the site.
+
+* TODO Write site content
+Site content can be written down in one or multiple
+json files. Each iteration of pages will grab that
+content and display it however it chooses
+
+* TODO Switching between site page styles
+
+* Site page ideas:
+Some ideas for the site pages
+
+** Plain HTML
+Just a plain html minimal css display. For funsies
+
+** Legit portfolio
+Maybe a legit portfolio page that's actually
+professional. Something to show off idk.
+
+** Old computer
+An old timey computer were each page is a desktop
+app and you open them in small windows. Could be
+based off of Windows XP or Windows 95.
+
+* Page links that should be there:
+List of pages that should be easily accessible on the
+site. Some of these could be merged into one single page
+as well. Like about and projects could all be on one page
+
+** About page
+General about me. Could include a picture of me
+
+** Resume
+My resume (as html or easy printable pdf)
+
+** Projects
+List of projects I want to show off. Includes:
+- title
+- link
+- description
+- technologies
+- image?
+  
+** Education
+Show current education. Potentially show transcript?
+
+** Random stuff?
+- Advent of code stats
+- Spotify stats
+- GD stats
+- GH stats
+  
+
