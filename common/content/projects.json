@@ -1,0 +1,51 @@
+[
+	{
+		"name" : "Deduce",
+		"link" : "https://jsiek.github.io/deduce/",
+		"source" : "https://github.com/jsiek/deduce",
+		"bullets" : ["A proof assistant used for teaching correctness proofs of functional programs to students.",
+					 "I have worked on developing the [website](https://jsiek.github.io/deduce/), general functionality and the [emacs package](https://github.com/mateidragony/deduce-mode)"]
+	},
+
+	{
+		"name" : "Mega Puzzle",
+		"link" : "",
+		"source" : "",
+		"bullets" : ["An interconnected puzzle extravanganza inspired by [Mr. Spock](https://github.com/Spoccer) and the [MIT Mystery Hunt](https://en.wikipedia.org/wiki/MIT_Mystery_Hunt)",
+					 "2023 ([site](https://sites.google.com/iu.edu/mega-puzzle)): Q*bert, Sly Spy, Word Zapper and more!",
+					 "2024 ([site](https://luddy-llc.github.io/MegaPuzzle2024/) [source](https://github.com/Luddy-LLC/MegaPuzzle2024)): Supercoolio's Quest, Musical Bards, Castaway and more!"]
+	},
+
+	{
+		"name" : "Racket Compiler",
+		"link" : "",
+		"source" : "https://github.com/mateidragony/racket-compiler",
+		"bullets" : ["A simple compiler for a subset of Racket. Made as a part of CSCI-P 423 Compilers class at IU.",
+					 "Made with Racket, by Racket, for Racket."]
+	},
+
+	{
+		"name" : "BareOS 🧸",
+		"link" : "",
+		"source" : "https://github.com/mateidragony/bareOS",
+		"bullets" : ["A very bare-bones kernel built for RISC-V devices. Made as part of CSCI-P 436 Operating Systems class at IU.",
+					 "Made with C and RISC-V Assembly."] 
+		
+	},
+
+	{
+		"name" : "MLispy",
+		"link" : "",
+		"source" : "https://github.com/mateidragony/MLispy",
+		"bullets" : ["A custom made Lisp based language inspired by [Build your own Lisp](https://buildyourownlisp.com).",
+					 "Made with C."]
+	},
+
+	{
+		"name" : "SuperSmashMateis",
+		"link" : "",
+		"source" : "https://github.com/mateidragony/SuperSmashMateis",
+		"bullets" : ["A *very* shoddy recreation of the hit game [Super Smash Bros.](https://en.wikipedia.org/wiki/Super_Smash_Bros.) in Java where you can play as some of my friends and family.",
+					 "Made with Java and lots of spaghetti code."]
+	}
+]

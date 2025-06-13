@@ -1,0 +1,17 @@
+{
+	"name" : "Matéi Cloteaux",
+	"image" : "me.jpg",
+	"blurb" : "Hey guys! I'm currently a Master's student studying Computer Science at Indiana University in Bloomington, IN. I love programming languages, systems and computer science pedagogy. I enjoy playing tennis, maximizing shareholder value and messing around with code.",
+	"links" : [
+		{
+			"text" : "Github",
+			"link" : "https://github.com/mateidragony",
+			"icon" : ""
+		},
+		{
+			"text" : "LinkedIn",
+			"link" : "https://www.linkedin.com/in/matei-cloteaux/",
+			"icon" : ""
+		}
+	]
+}

@@ -1,0 +1,28 @@
+[
+	{
+		"company" : "Liberty Mututal",
+		"bullets" : [
+			"My first year as a TechStart intern I used Snowflake Native Apps and Streamlit to develop a proof-of-concept app enabling users to easily interact with data within Snowflake via a user-friendly and accessible UI.",
+			"My second year as an intern I am working with my team of developers to modernize CI/CD infrastructure by migrating depolyment pipelines to GitHub Actions."
+		]
+	},
+
+	{
+		"company" : "Indiana Daily Student",
+		"bullets" : [
+			"Managing editor of digital: I help to lead my team of web developers to design and create multimedia projects and data graphics to deliver impactful narratives online.",
+			"Web developer: [Little 500 guide 2025](https://specials.idsnews.com/little-500-guide-2025/index.html) • [Solar eclipse guide 2024](https://www.idsnews.com/article/2024/03/your-local-guide-to-the-2024-solar-eclipse) • [The crows return](https://www.idsnews.com/article/2024/02/the-crows-return) • [more!](https://www.idsnews.com/staff/matei-cloteaux)"
+		]
+	},
+
+	{
+		"company" : "Teaching",
+		"bullets" : [
+			"Spring 2025: Undergraduate Instructor C434 Data Structures and P436 Operating Systems",
+			"Fall 2025: Undergraduate Instructor C335 Computer Structures",
+			"Spring 2024: Undergraduate Instructor C335 Computer Structures",
+			"Fall 2024: Undergraduate Instructor C200 Introduction to Computers and Programming",
+			"Spring 2023: Undergraduate Instructor H241 Discrete Structures"
+		]
+	}	
+]

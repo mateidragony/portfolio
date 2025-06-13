@@ -17,17 +17,21 @@ content and display it however it chooses
 * Site page ideas:
 Some ideas for the site pages
 
-** Plain HTML
+** TODO Plain HTML
 Just a plain html minimal css display. For funsies
 
-** Legit portfolio
+** TODO Legit portfolio
 Maybe a legit portfolio page that's actually
 professional. Something to show off idk.
 
-** Old computer
+** TODO Old computer
 An old timey computer were each page is a desktop
 app and you open them in small windows. Could be
 based off of Windows XP or Windows 95.
+
+** TODO Ugly as hell
+Just a really ugly site. Terrible corlors. The
+background is a repeated picture of my face.
 
 * Page links that should be there:
 List of pages that should be easily accessible on the
