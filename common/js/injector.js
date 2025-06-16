@@ -7,10 +7,14 @@ function mdLinkToAnchor(str) {
 }
 
 async function getData(name) {
+	console.log(`Fetching ${window.location.origin}/common/content/${name}.json`);
 	return fetch(`${window.location.origin}/common/content/${name}.json`)
 		.then(res => res.text())
 		.then(data => mdLinkToAnchor(data))
-		.then(text => JSON.parse(text))
+		.then(text => {
+			console.log(text)
+			JSON.parse(text)
+		})
 		.catch(err => console.error(err));
 }
 
