@@ -7,14 +7,10 @@ function mdLinkToAnchor(str) {
 }
 
 async function getData(name) {
-	console.log(`Fetching ${window.location.origin}/common/content/${name}.json`);
-	return fetch(`${window.location.origin}/common/content/${name}.json`)
+	return fetch(`${baseUrl()}/common/content/${name}.json`)
 		.then(res => res.text())
 		.then(data => mdLinkToAnchor(data))
-		.then(text => {
-			console.log(text)
-			JSON.parse(text)
-		})
+		.then(text => JSON.parse(text))
 		.catch(err => console.error(err));
 }
 
@@ -34,7 +30,7 @@ function injectBlurb(html) {
 }
 
 async function injectImage(img) {
-	img.src = `${window.location.origin}/common/assets/${about.image}`
+	img.src = `${baseUrl()}/common/assets/${about.image}`
 	img.alt = about.image_alt
 	await loadImage(img)
 	document.querySelector('.blurb').innerHTML = about.blurb

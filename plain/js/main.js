@@ -5,7 +5,7 @@
 	await injectImage(document.querySelector('.headshot'))
 	injectBlurb(document.querySelector('.blurb'))
 
-	about.links.push({'link' : `${window.location.origin}/common/resume/resume.html`, 'text' : 'Resume'})	
+	about.links.push({'link' : `${baseUrl()}/common/resume/resume.html`, 'text' : 'Resume'})	
 	injectLinks(document.querySelector('.links'))
 	
 	injectProjects(document.querySelector('.projects'))
