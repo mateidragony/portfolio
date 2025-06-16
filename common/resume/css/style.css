@@ -1,0 +1,124 @@
+:root {
+    --font: "Computer Modern Serif", serif;
+
+    /* font sizes */
+    --name-size:       30px;
+    --section-size:    18px;
+    --title-size:      16px;
+    --sub-title-size:  15px;
+    --text-size:       14px;
+    --sub-text-size:   13px;
+
+    /* margins */
+    --top-margin:            30px;
+    --header-margin:         2px;
+    --section-margin:        5px;
+    --section-label-margin:  4px;
+    --sub-title-margin:      1px;
+    --title-top-margin:      6px;
+    --title-bottom-margin:   2px;
+    --link-spacing:          5px; 
+}
+
+/* ********************************* */
+/* General rules */
+/* ********************************* */
+* {
+    margin: 0;
+    font-family: var(--font);
+    font-size: var(--text-size);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding: 0 50px;
+}
+
+/* ********************************* */
+/* Header */
+/* ********************************* */
+header {
+    text-align: center;
+
+    h1 {
+        font-size: var(--name-size);
+        margin: var(--top-margin) 0 var(--header-margin) 0;
+    }
+
+    .links, p {
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--section-margin);
+
+        a,
+        a:link,
+        a:visited {
+            text-decoration: underline;
+        }
+
+        a:hover,
+        a:active {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        p, a {
+            color: black;
+            padding: 0 var(--link-spacing);
+            font-size: var(--sub-text-size);
+        }
+
+        p, a:not(:last-child) {
+            border-right: solid 1px black;
+        }
+    }
+}
+
+/* ********************************* */
+/* General Sections */
+/* ********************************* */
+section {
+    margin-top: var(--section-margin);
+
+    h2 {
+        font-size: var(--section-size);
+        font-weight: normal;
+        
+        border-bottom: solid black 1px;
+
+        margin-bottom:  var(--section-label-margin);
+    }
+
+    figure.title, figure.sub-title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    figure.title {
+        margin: var(--title-top-margin) 0 var(--title-bottom-margin);
+
+        p, strong, em, span {
+            font-size: var(--title-size);
+        }
+    }
+
+    figure.sub-title {
+        margin-bottom: var(--sub-title-margin);
+
+        p {
+            font-size: var(--sub-title-size);
+            font-style: italic;
+        }
+    }
+}
+
+/* ********************************* */
+/* Specific rules for other sections */
+/* ********************************* */
+section.education {
+    p {
+        font-size: var(--sub-text-size);
+    }
+}

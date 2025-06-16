@@ -1,0 +1,79 @@
+/*
+This may be plain html but come on. I need some sort of structure...
+*/
+
+.hidden {
+	display: none;
+}
+
+h2 {
+	font-size: 20pt;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+
+	padding-bottom: 500px;
+	
+	.name {
+		text-align: center;
+		font-size: 30pt;
+	}
+
+	section:not(:last-of-type) {
+		padding-bottom: 30px;
+		border-bottom: solid 1px black;
+	}
+	
+	.about {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		
+		.blurb-section {
+			.links {
+				display: flex;
+				gap: 10px;
+			}
+		}
+		
+		.headshot {
+			display: block;
+			width: 200px;
+			margin: 0 auto;
+		}
+	}
+
+	.projects {		
+		.project {
+			h3 {
+				margin-bottom: 0;
+			}
+
+			.links {
+				margin: 0;
+			}
+			
+			ul {
+				margin: 5px 0;
+			}
+		}
+
+		button {
+			margin-top: 20px;
+		}
+	}
+
+	.experience {
+		div {
+			h3 {
+				margin-bottom: 0;
+			}
+			
+			ul {
+				margin: 5px 0;
+			}
+		}
+	}	
+}

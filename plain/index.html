@@ -4,26 +4,40 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Matei Cloteaux</title>
+
+	<link rel="stylesheet" href="css/loader.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 </head>
 
 <body>
+
+	<div class="loader">
+		<p><span>Loading page</span></p>
+	</div>
+	
 	<main>
-		<article class="about">
-			<h1 class="name"></h1>
-			<p class="blurb"></p>
-			<section class='links'></section>
-		</article>
+		<h1 class="name"></h1>
 		
-		<article class="projects">
-			
-		</article>
+		<section class="about">
+			<div class="blurb-section">
+				<h2>About me</h2>
+				<p class="blurb"></p>
+				<div class='links'></div>
+			</div>
+			<img class="headshot" alt="" src="" />
+		</section>
 		
-		<article class="experience">
-			
-		</article>
+		<section class="projects">
+			<h2>Projects</h2>
+		</section>
+		
+		<section class="experience">
+			<h2>Experience</h2>
+		</section>
 	</main>
 
 	<script src="../common/js/injector.js"></script>
+	<script src="../common/js/utils.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

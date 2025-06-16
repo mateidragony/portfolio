@@ -7,7 +7,9 @@ will have multiple presentations of the same content.
 The html will not necessarily be shared, but the words
 will be spread around the site.
 
-* TODO Write site content
+* DONE Write site content
+CLOSED: [2025-06-15 Sun 23:29]
+- State "DONE"       from "TODO"       [2025-06-15 Sun 23:29]
 Site content can be written down in one or multiple
 json files. Each iteration of pages will grab that
 content and display it however it chooses
@@ -17,7 +19,11 @@ content and display it however it chooses
 * Site page ideas:
 Some ideas for the site pages
 
-** TODO Plain HTML
+** DONE Plain HTML
+CLOSED: [2025-06-15 Sun 23:29]
+- State "DONE"       from "IN-PROGRESS" [2025-06-15 Sun 23:29]
+- State "IN-PROGRESS" from "TODO"       [2025-06-15 Sun 19:43] \\
+  Mostly finished. Just adding last touches
 Just a plain html minimal css display. For funsies
 
 ** TODO Legit portfolio
@@ -29,9 +35,15 @@ An old timey computer were each page is a desktop
 app and you open them in small windows. Could be
 based off of Windows XP or Windows 95.
 
-** TODO Ugly as hell
+** IN-PROGRESS Ugly as hell
+- State "IN-PROGRESS" from "TODO"       [2025-06-15 Sun 23:29] \\
+  Just starting. Mostly scared to do legit ones...
 Just a really ugly site. Terrible corlors. The
 background is a repeated picture of my face.
+
+** TODO Full terminal
+Terminal where you have to type commands to view
+the content
 
 * Page links that should be there:
 List of pages that should be easily accessible on the

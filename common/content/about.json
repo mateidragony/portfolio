@@ -1,17 +1,18 @@
 {
 	"name" : "Matéi Cloteaux",
 	"image" : "me.jpg",
-	"blurb" : "Hey guys! I'm currently a Master's student studying Computer Science at Indiana University in Bloomington, IN. I love programming languages, systems and computer science pedagogy. I enjoy playing tennis, maximizing shareholder value and messing around with code.",
+	"image_alt" : "A picture of me wearing a navy blue button up smiling in front of a brick wall.",
+	"blurb" : "Hey guys! I'm currently a Master's student studying Computer Science at Indiana University in Bloomington, IN. I love programming languages, systems and computer science pedagogy. In my freetime I enjoy playing tennis, hanging out with my [best friend](https://www.linkedin.com/in/dariana-chavez/) and messing around with code.",
 	"links" : [
 		{
 			"text" : "Github",
 			"link" : "https://github.com/mateidragony",
-			"icon" : ""
+			"icon" : "fa-square-github"
 		},
 		{
 			"text" : "LinkedIn",
 			"link" : "https://www.linkedin.com/in/matei-cloteaux/",
-			"icon" : ""
+			"icon" : "fa-linkedin"
 		}
 	]
 }
