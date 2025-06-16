@@ -1,0 +1,2 @@
+markdown==3.7
+libsass==0.23.0
