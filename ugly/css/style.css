@@ -1,0 +1,67 @@
+
+* {
+	font-family: 'comic-sans-ms', sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	background-image: url(../../common/assets/me.jpg);
+	background-size: 20px;
+}
+
+main {
+	max-width: 850px;
+	margin: 0 auto;
+	border: ridge 10px gray;
+	padding: 20px;
+	
+	transition: all 0.2s;
+
+	span{
+		display: inline-block;
+		transition: transform 0.2s;
+	}
+	
+	span:hover{
+		transform: scale(1.2);
+	}
+	
+	h1 {
+		padding: 20pt;
+		
+		font-size: 50pt;
+		text-decoration: underline;
+		font-style: italic;
+		font-weight: bolder;
+		text-align: center;
+
+		margin: 0;
+		margin-top: 20px;
+
+		background-image: url('../../common/assets/exclamation.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	h2 {
+		background-image: url('../../common/assets/fire.gif');
+		background-size: 100% 100%;
+		padding: 10px;
+		border-radius: 100000px;
+		
+		width: fit-content;
+		color: white;
+	}
+
+	
+	.about {
+		img {
+			position: fixed;
+			width: 100px;
+		}
+	}
+}

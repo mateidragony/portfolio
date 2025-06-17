@@ -1,0 +1,32 @@
+/**
+Full page loader
+**/
+
+
+@keyframes dots {
+  0%, 20%   { content: '.';   }
+  40%       { content: '..';  }
+  60%       { content: '...'; }
+  90%, 100% { content: '';    }
+}
+
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: white;
+	
+	span:after {
+		animation: dots 1.5s linear infinite;
+		content: '';
+	}
+}
+

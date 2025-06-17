@@ -3,12 +3,48 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Document</title>
+	<title>Matei Cloteaux</title>
+
+	<!-- Adobe fonts -->
+	<link rel="stylesheet" href="https://use.typekit.net/iok1dsx.css">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/loader.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 </head>
 
 <body>
-	<h1>Ugly</h1>
+
+	<div class="loader" aria-hidden="true">
+		<p><span>Loading page</span></p>
+	</div>
 	
+	<main>
+		<div class="name-container">
+			<h1 class="name"></h1>
+		</div>
+
+		<section class="about">			
+			<div class="blurb-section">
+				<h2>About me</h2>
+				<p class="blurb"></p>
+				<div class='links'></div>
+			</div>
+			<img class="headshot" alt="" src="" />
+		</section>
+		
+		<section class="projects">
+			<h2>Projects</h2>
+		</section>
+		
+		<section class="experience">
+			<h2>Experience</h2>
+		</section>
+	</main>
+
+	<script src="../common/js/injector.js"></script>
+	<script src="../common/js/utils.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
