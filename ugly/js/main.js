@@ -161,16 +161,23 @@ function generateMovingImages(movingImages, images) {
 										  images['click-go-away'], 200, 200)]
 
 	window.onclick = window.ontouchstart = (e) => {
-		const collisions = movingImages.filter(i => i.pointCollides(e.clientX, e.clientY))
+		let x = e.touches ? e.touches[0].clientX : e.clientX
+		let y = e.touches ? e.touches[0].clientY : e.clientY
+
+		if (window.visualViewport) {
+			x += window.visualViewport.offsetLeft
+			y += window.visualViewport.offsetTop
+		}
+		
+		const collisions = movingImages.filter(i => i.pointCollides(x, y))
 		if (collisions.length == 0) {
 			if (e.target.tagName == 'A' || e.target.tagName == 'BUTTON') {
 				return
 			} else if (firstClick) {
 				firstClick = false
-				movingImages.push(new MovingImage(e.clientX, e.clientY, images['dont-misclick'],
-												  200, 200))
+				movingImages.push(new MovingImage(x, y, images['dont-misclick'], 200, 200))
 			} else {
-				movingImages.push(new MovingImage(e.clientX, e.clientY, randomDictValue(images)))
+				movingImages.push(new MovingImage(x, y, randomDictValue(images)))
 			}
 		} else {
 			collisions.forEach(c => movingImages.splice(movingImages.indexOf(c), 1))
