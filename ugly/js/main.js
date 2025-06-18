@@ -160,15 +160,10 @@ function generateMovingImages(movingImages, images) {
 	const movingImages = [new MovingImage(window.innerWidth/2.1, window.innerHeight/2.3,
 										  images['click-go-away'], 200, 200)]
 
-	window.onclick = window.ontouchstart = (e) => {
-		let x = e.touches ? e.touches[0].clientX : e.clientX
-		let y = e.touches ? e.touches[0].clientY : e.clientY
+	window.onclick = (e) => {
+		let x = e.clientX
+		let y = e.clientY
 
-		if (window.visualViewport) {
-			x += window.visualViewport.offsetLeft
-			y += window.visualViewport.offsetTop
-		}
-		
 		const collisions = movingImages.filter(i => i.pointCollides(x, y))
 		if (collisions.length == 0) {
 			if (e.target.tagName == 'A' || e.target.tagName == 'BUTTON') {
@@ -195,7 +190,7 @@ function generateMovingImages(movingImages, images) {
 
 	setInterval(() => {
 		g.clearRect(0, 0, canvas.width, canvas.height)
-		if (!allowImages) movingImages.splice(0, movingImages.length)
+		if (!allowImages || mobileAndTabletCheck()) movingImages.splice(0, movingImages.length)
 		movingImages.forEach(i => {
 			i.update(canvas.width, canvas.height)
 			i.draw(g)
