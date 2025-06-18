@@ -1,5 +1,7 @@
 'use strict'
 
+let firstClick = true
+
 async function injectData() {
 	injectName(document.querySelector('.name'))
 	injectBlurb(document.querySelector('.blurb'))
@@ -101,6 +103,22 @@ function generateMovingImages(movingImages, images) {
 	}, Math.random() * 7000 + 3000)
 }
 
+function canvasClick(x, y, target, movingImages, images) {
+	const collisions = movingImages.filter(i => i.pointCollides(x, y))
+	if (collisions.length == 0) {
+		if (target.tagName == 'A' || target.tagName == 'BUTTON') {
+			return
+		} else if (firstClick) {
+			firstClick = false
+			movingImages.push(new MovingImage(x, y, images['dont-misclick'], 200, 200))
+		} else {
+			movingImages.push(new MovingImage(x, y, randomDictValue(images)))
+		}
+	} else {
+		collisions.forEach(c => movingImages.splice(movingImages.indexOf(c), 1))
+	}
+}
+
 
 (async () => {
 	await initData()
@@ -134,7 +152,10 @@ function generateMovingImages(movingImages, images) {
 	const canvas = document.querySelector('canvas')
 	resizeCanvas(canvas)
 	const g = canvas.getContext('2d')
-	window.onresize = () => resizeCanvas(canvas)
+	window.onresize = () => {
+		if (canvas.width == window.innerWidth && mobileAndTabletCheck());
+		else resizeCanvas(canvas)
+	}
 
 	const images = {
 		'me'            : createImage(`${baseUrl()}/common/assets/me.jpg`),
@@ -152,25 +173,13 @@ function generateMovingImages(movingImages, images) {
 		'dariana'       : createImage(`${baseUrl()}/common/assets/dariana.jpeg`),
 	}
 	await Promise.all(Object.values(images).map(i => loadImage(i)))
-	const movingImages = [new MovingImage(window.innerWidth/2.1, window.innerHeight/2.3, images['click-go-away'], 200, 200)]
+	const movingImages = [new MovingImage(window.innerWidth/2.1, window.innerHeight/2.3,
+										  images['click-go-away'], 200, 200)]
 
-	let firstClick = true
-	window.onclick = (e) => {
-		const collisions = movingImages.filter(i => i.pointCollides(e.clientX, e.clientY))
-		if (collisions.length == 0) {
-			if (e.target.tagName == 'A' || e.target.tagName == 'BUTTON') {
-				return
-			} else if (firstClick) {
-				firstClick = false
-				movingImages.push(new MovingImage(e.clientX, e.clientY, images['dont-misclick'], 200, 200))
-			} else {
-				movingImages.push(new MovingImage(e.clientX, e.clientY, randomDictValue(images)))
-			}
-		} else {
-			collisions.forEach(c => movingImages.splice(movingImages.indexOf(c), 1))
-		}
-	}
+	window.onclick = (e) => canvasClick(e.clientX, e.clientY, e.target, movingImages, images)
+	window.ontouchstart = (e) => canvasClick(e.pageX, e.pageY, e.target, movingImages, images)
 
+	
 	let allowImages = true
 	const stop = document.querySelector('.stop-button')
 	stop.onclick = () => {
