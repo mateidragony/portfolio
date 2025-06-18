@@ -40,6 +40,7 @@ function injectLinks(html) {
 	for (let link of about.links) {
 		const linkHTML = document.createElement('a')
 		linkHTML.classList.add('link')
+		linkHTML.target = '_blank'
 		linkHTML.href = link.link
 		linkHTML.innerText = link.text
 		html.appendChild(linkHTML)
