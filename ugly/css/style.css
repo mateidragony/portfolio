@@ -50,14 +50,55 @@
 	display: none;
 }
 
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	pointer-events: none;
+
+	z-index: 10;
+}
+
 body {
 	background-image: url(../../common/assets/me.jpg);
 	background-size: 20px;
 }
 
+.stop-button {
+	all: unset;
+
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+
+	padding: 10px 20px;
+	background-color: #00ffff;
+	color: red;
+	border: ridge #ff00ff 8px;
+
+	transition: all 0.2s;
+}
+
+.stop-button:hover {
+	cursor: pointer;
+	background-color: #eaff00;
+	color: #69523a;
+	border-color: #7f03fc;
+}
+
+.stop-button:active {
+	cursor: pointer;
+	background-color: black;
+	color: #38d1ff;
+	border-color: #fc0703;
+}
+
 main {
 	max-width: 850px;
-	margin: 0 auto;
+	margin: 50px auto 200px;
 	border: ridge 10px gray;
 	padding: 20px;
 	

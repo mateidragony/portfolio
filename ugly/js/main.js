@@ -4,7 +4,7 @@ async function injectData() {
 	injectName(document.querySelector('.name'))
 	injectBlurb(document.querySelector('.blurb'))
 
-	about.links.push({'link' : `${baseUrl()}/common/resume/resume.html`, 'text' : 'Resume (page)'})
+	about.links.push({'link' : `${baseUrl()}/common/resume/resume.html`, 'text' : 'Resume (html)'})
 	about.links.push({'link' : `${baseUrl()}/common/resume/resume.pdf`, 'text' : 'Resume (pdf)'})	
 	injectLinks(document.querySelector('.links'))
 	
@@ -22,16 +22,43 @@ async function injectData() {
 }
 
 class MovingImage {
-	constructor(x, y, img) {
+	constructor(x, y, img, w=undefined, h=undefined) {
 		this.x = x
 		this.y = y
+		if (w == undefined) this.w = Math.random() * 100 + 70
+		else                this.w = w
+		if (h == undefined) this.h = Math.random() * 100 + 70
+		else                this.h = h
 		this.img = img
 		this.dx = Math.floor((Math.random() * 5 + 3)) * (Math.random() > 0.5 ? 1 : -1)
 		this.dy = Math.floor((Math.random() * 5 + 3)) * (Math.random() > 0.5 ? 1 : -1)
 	}
 
 	draw(g) {
-		g.drawImage(this.img, this.x, this.y)
+		g.drawImage(this.img, this.x, this.y, this.w, this.h)
+	}
+
+	update(cw, ch) {
+		this.x += this.dx
+		this.y += this.dy
+
+		if (this.x < 0) {
+			this.x = 0
+			this.dx *= -1
+		} if (this.y < 0) {
+			this.y = 0
+			this.dy *= -1
+		} if (this.x + this.w > cw) {
+			this.x = cw - this.w
+			this.dx *= -1
+		} if (this.y + this.h > ch) {
+			this.y = ch - this.h
+			this.dy *= -1
+		}
+	}
+
+	pointCollides(x, y) {
+		return x >= this.x && x <= this.x + this.w && y >= this.y && y <= this.y + this.h
 	}
 }
 
@@ -41,14 +68,39 @@ function splitSpaceSpan(text) {
 	let skipping = false
 	for (let i=0; i!=splts.length; ++i) {
 		const word = splts[i]
-		if (word.includes('<a')) skipping = true
-		if (word.includes('</a')) skipping = false
+		if (word.includes('<a') || word.includes('<span')) skipping = true
+		if (word.includes('</a') || word.includes<'</span') skipping = false
 		else if (!skipping) {
 			splts[i] = `<span class="word-grow">${word}</span>`
 		}
 	}
 	return splts.join(' ')
 }
+
+function randomDictValue(dict) {
+	return Object.values(dict)[Math.floor(Math.random() * Object.keys(dict).length)]
+}
+
+function resizeCanvas(canvas) {
+	canvas.width = window.innerWidth
+	canvas.height = window.innerHeight
+}
+
+function createImage(src) {
+	const img = new Image(100,100)
+	img.src = src
+	return img
+}
+
+function generateMovingImages(movingImages, images) {
+	setTimeout(() => {
+		movingImages.push(new MovingImage(Math.random() * window.innerWidth,
+										  Math.random() * window.innerHeight,
+										  randomDictValue(images)))
+		generateMovingImages(movingImages, images)
+	}, Math.random() * 7000 + 3000)
+}
+
 
 (async () => {
 	await initData()
@@ -78,6 +130,64 @@ function splitSpaceSpan(text) {
 			e.innerHTML = e.oldHTML
 		}
 	})
+
+	const canvas = document.querySelector('canvas')
+	resizeCanvas(canvas)
+	const g = canvas.getContext('2d')
+	window.onresize = () => resizeCanvas(canvas)
+
+	const images = {
+		'me'            : createImage(`${baseUrl()}/common/assets/me.jpg`),
+		'me-ids'        : createImage(`${baseUrl()}/common/assets/me-ids.jpeg`),
+		'me-friends'    : createImage(`${baseUrl()}/common/assets/me-friends.JPG`),
+		'me-sign'       : createImage(`${baseUrl()}/common/assets/me-sign.jpg`),
+		'me-glasses'    : createImage(`${baseUrl()}/common/assets/me-glasses.JPG`),
+		'me-snow'       : createImage(`${baseUrl()}/common/assets/me-snow.jpg`),
+		'click-go-away' : createImage(`${baseUrl()}/common/assets/click-go-away.png`),
+		'look-here'     : createImage(`${baseUrl()}/common/assets/look-here.png`),
+		'over-here'     : createImage(`${baseUrl()}/common/assets/over-here.png`),
+		'distraction'   : createImage(`${baseUrl()}/common/assets/distraction.png`),
+		'dont-misclick' : createImage(`${baseUrl()}/common/assets/dont-misclick.png`),
+		'look-at-me'    : createImage(`${baseUrl()}/common/assets/look-at-me.png`),
+		'dariana'       : createImage(`${baseUrl()}/common/assets/dariana.jpeg`),
+	}
+	await Promise.all(Object.values(images).map(i => loadImage(i)))
+	const movingImages = [new MovingImage(window.innerWidth/2.1, window.innerHeight/2.3, images['click-go-away'], 200, 200)]
+
+	let firstClick = true
+	window.onclick = (e) => {
+		const collisions = movingImages.filter(i => i.pointCollides(e.clientX, e.clientY))
+		if (collisions.length == 0) {
+			if (e.target.tagName == 'A' || e.target.tagName == 'BUTTON') {
+				return
+			} else if (firstClick) {
+				firstClick = false
+				movingImages.push(new MovingImage(e.clientX, e.clientY, images['dont-misclick'], 200, 200))
+			} else {
+				movingImages.push(new MovingImage(e.clientX, e.clientY, randomDictValue(images)))
+			}
+		} else {
+			collisions.forEach(c => movingImages.splice(movingImages.indexOf(c), 1))
+		}
+	}
+
+	let allowImages = true
+	const stop = document.querySelector('.stop-button')
+	stop.onclick = () => {
+		allowImages = !allowImages
+		stop.innerHTML = stop.innerHTML == 'STOP IMAGES PLEASE!!!' ? 'Bring the images back now!!' : 'STOP IMAGES PLEASE!!!'
+	}
 	
 	document.querySelector('.loader').classList.add('hidden')
+
+	setInterval(() => {
+		g.clearRect(0, 0, canvas.width, canvas.height)
+		if (!allowImages) movingImages.splice(0, movingImages.length)
+		movingImages.forEach(i => {
+			i.update(canvas.width, canvas.height)
+			i.draw(g)
+		})
+	}, 1000/30)
+	
+	setTimeout(() => generateMovingImages(movingImages, images), 0)
 })()
