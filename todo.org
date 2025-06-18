@@ -41,6 +41,11 @@ based off of Windows XP or Windows 95.
 Just a really ugly site. Terrible corlors. The
 background is a repeated picture of my face.
 
+*** TODO Moving images
+Images that appear and bounce arounf the screen.
+They disappear when you click on them, but if you
+misclick, more appear.
+
 ** TODO Full terminal
 Terminal where you have to type commands to view
 the content

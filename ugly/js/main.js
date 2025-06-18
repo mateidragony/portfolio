@@ -4,7 +4,8 @@ async function injectData() {
 	injectName(document.querySelector('.name'))
 	injectBlurb(document.querySelector('.blurb'))
 
-	about.links.push({'link' : `${baseUrl()}/common/resume/resume.html`, 'text' : 'Resume'})	
+	about.links.push({'link' : `${baseUrl()}/common/resume/resume.html`, 'text' : 'Resume (page)'})
+	about.links.push({'link' : `${baseUrl()}/common/resume/resume.pdf`, 'text' : 'Resume (pdf)'})	
 	injectLinks(document.querySelector('.links'))
 	
 	injectProjects(document.querySelector('.projects'))
@@ -34,6 +35,21 @@ class MovingImage {
 	}
 }
 
+
+function splitSpaceSpan(text) {
+	const splts = text.split(' ')
+	let skipping = false
+	for (let i=0; i!=splts.length; ++i) {
+		const word = splts[i]
+		if (word.includes('<a')) skipping = true
+		if (word.includes('</a')) skipping = false
+		else if (!skipping) {
+			splts[i] = `<span class="word-grow">${word}</span>`
+		}
+	}
+	return splts.join(' ')
+}
+
 (async () => {
 	await initData()
 	await injectData()
@@ -47,8 +63,21 @@ class MovingImage {
 	name.onmousemove = (e) => {
 		const rect = name.getBoundingClientRect()
 		let x = (e.clientX - rect.left) - rect.width / 2
-		name.querySelector('h1').style.transform = `rotateZ(${x}deg)`
+		name.querySelector('h1').style.transform = `rotateZ(${x/10}deg)`
 	}
+
+	document.querySelectorAll('p').forEach(e => e.innerHTML = splitSpaceSpan(e.innerHTML))
+	document.querySelectorAll('li').forEach(e => e.innerHTML = splitSpaceSpan(e.innerHTML))
+
+	document.querySelectorAll('a').forEach(e => {
+		e.onmouseenter = () => {
+			e.oldHTML = e.innerHTML
+			e.innerHTML = 'CLICK ME NOW!!!'
+		}
+		e.onmouseleave = () => {
+			e.innerHTML = e.oldHTML
+		}
+	})
 	
 	document.querySelector('.loader').classList.add('hidden')
 })()

@@ -1,3 +1,46 @@
+@keyframes grow {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes hvr-buzz {
+	0% {
+		transform: scale(2);
+	}
+	50% {
+		transform: translateX(5px) rotate(5deg) scale(2);
+	}
+	100% {
+		transform: translateX(-5px) rotate(-5deg) scale(2);
+	}
+}
+
+@keyframes hvr-wobble-skew {
+  16.65% {
+    transform: skew(-12deg);
+  }
+  33.3% {
+    transform: skew(10deg);
+  }
+  49.95% {
+    transform: skew(-6deg);
+  }
+  66.6% {
+    transform: skew(4deg);
+  }
+  83.25% {
+    transform: skew(-2deg);
+  }
+  100% {
+    transform: skew(0);
+  }
+}
+
+
 
 * {
 	font-family: 'comic-sans-ms', sans-serif;
@@ -20,13 +63,40 @@ main {
 	
 	transition: all 0.2s;
 
-	span{
-		display: inline-block;
-		transition: transform 0.2s;
+	p, li {
+		font-size: 12pt;
 	}
 	
-	span:hover{
-		transform: scale(1.2);
+	.word-grow{
+		box-sizing: border-box;
+		display: inline-block;
+		transition: all 0.2s;
+	}
+	
+	.word-grow:hover{
+		font-size: 20pt;
+	}
+
+	.name-container {
+		animation: grow 1s linear 0s infinite alternate;
+	}
+
+	a {
+		display: inline-block;
+		margin: 1px;
+		padding: 0 10px;
+		background-color: #ff3ac6;
+		border: ridge #5fa41c 5px;
+		color: white;
+		transition: all 0.2s;
+	}
+
+	a:hover {
+		animation-fill-mode: both;
+		animation: hvr-buzz 0.15s linear infinite;
+		background-color: #bb00ff;
+		color: yellow;
+		border-color: #00ffff;
 	}
 	
 	h1 {
@@ -52,9 +122,18 @@ main {
 		background-size: 100% 100%;
 		padding: 10px;
 		border-radius: 100000px;
+
+		font-size: 30pt;
 		
 		width: fit-content;
 		color: white;
+	}
+
+	h3 {
+		animation: hvr-wobble-skew 1s linear infinite;
+		background-image: linear-gradient( 89.7deg, rgba(223,0,0,1) 2.7%, rgba(214,91,0,1) 15.1%, rgba(233,245,0,1) 29.5%, rgba(23,255,17,1) 45.8%, rgba(29,255,255,1) 61.5%, rgba(5,17,255,1) 76.4%, rgba(202,0,253,1) 92.4% );
+		padding: 10px;
+		width: fit-content;
 	}
 
 	
@@ -63,5 +142,14 @@ main {
 			position: fixed;
 			width: 100px;
 		}
+	}
+
+	button {
+		all: unset;
+	}
+
+	button:after {
+		content: ' (This is a button, i just didnt style it. You can click it and it will do soemthing, who kwnos what tho.)';
+		color: #555555;
 	}
 }
