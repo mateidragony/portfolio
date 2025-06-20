@@ -197,7 +197,6 @@ function generateMovingImages(movingImages, images) {
 		movingImages.forEach(i => {
 			i.update(canvas.width, canvas.height)
 			i.draw(g)
-			document.querySelector('.god').innerHTML = `x: ${i.x.toFixed(0)}, y: ${i.y.toFixed(0)}`
 		})
 	}, 1000/30)
 	
