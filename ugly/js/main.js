@@ -119,7 +119,7 @@ function generateMovingImages(movingImages, images) {
 		let x = (e.clientX - rect.left) - rect.width / 2
 		name.querySelector('h1').style.transform = `rotateZ(${x/10}deg)`
 	}
-
+	
 	document.querySelectorAll('p').forEach(e => e.innerHTML = splitSpaceSpan(e.innerHTML))
 	document.querySelectorAll('li').forEach(e => e.innerHTML = splitSpaceSpan(e.innerHTML))
 
@@ -141,6 +141,8 @@ function generateMovingImages(movingImages, images) {
 		else resizeCanvas(canvas)
 	}
 
+	console.log(`Width: ${canvas.width}, Height: ${canvas.height}`)
+
 	const images = {
 		'me'            : createImage(`${baseUrl()}/common/assets/me.jpg`),
 		'me-ids'        : createImage(`${baseUrl()}/common/assets/me-ids.jpeg`),
@@ -161,9 +163,12 @@ function generateMovingImages(movingImages, images) {
 										  images['click-go-away'], 200, 200)]
 
 	window.onclick = (e) => {
-		let x = e.clientX
-		let y = e.clientY
-
+		
+		let x = e.clientX * canvas.width / canvas.clientWidth
+		let y = e.clientY * canvas.height / canvas.clientHeight
+		
+		console.log(`X: ${x}, Y: ${y}`)
+		
 		const collisions = movingImages.filter(i => i.pointCollides(x, y))
 		if (collisions.length == 0) {
 			if (e.target.tagName == 'A' || e.target.tagName == 'BUTTON') {
@@ -190,12 +195,17 @@ function generateMovingImages(movingImages, images) {
 
 	setInterval(() => {
 		g.clearRect(0, 0, canvas.width, canvas.height)
-		if (!allowImages || mobileAndTabletCheck()) movingImages.splice(0, movingImages.length)
+		if (!allowImages) {
+			movingImages.splice(0, movingImages.length)
+		}
 		movingImages.forEach(i => {
 			i.update(canvas.width, canvas.height)
 			i.draw(g)
+			document.querySelector('.god').innerHTML = `x: ${i.x.toFixed(0)}, y: ${i.y.toFixed(0)}`
 		})
 	}, 1000/30)
 	
 	setTimeout(() => generateMovingImages(movingImages, images), 0)
+
+	console.log(mobileAndTabletCheck())
 })()
