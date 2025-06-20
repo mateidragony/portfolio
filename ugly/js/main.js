@@ -141,8 +141,6 @@ function generateMovingImages(movingImages, images) {
 		else resizeCanvas(canvas)
 	}
 
-	console.log(`Width: ${canvas.width}, Height: ${canvas.height}`)
-
 	const images = {
 		'me'            : createImage(`${baseUrl()}/common/assets/me.jpg`),
 		'me-ids'        : createImage(`${baseUrl()}/common/assets/me-ids.jpeg`),
@@ -166,8 +164,6 @@ function generateMovingImages(movingImages, images) {
 		
 		let x = e.clientX * canvas.width / canvas.clientWidth
 		let y = e.clientY * canvas.height / canvas.clientHeight
-		
-		console.log(`X: ${x}, Y: ${y}`)
 		
 		const collisions = movingImages.filter(i => i.pointCollides(x, y))
 		if (collisions.length == 0) {
@@ -206,6 +202,4 @@ function generateMovingImages(movingImages, images) {
 	}, 1000/30)
 	
 	setTimeout(() => generateMovingImages(movingImages, images), 0)
-
-	console.log(mobileAndTabletCheck())
 })()
