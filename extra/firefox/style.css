@@ -1,0 +1,166 @@
+:root {
+	--bg-color: #ffffff;
+
+	--trans-duration: 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #1C1B22;
+		--button-bg: #2E3440;
+		--button-fg: #A2A5AA;
+		--button-hvr: #CCCCCC;
+	}
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	
+	background-color: var(--bg-color);
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	main {
+		max-width: 500px;
+		padding: 20px;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		.title {
+			max-width: 100%;
+		}
+
+		.quick-links {
+			margin-top: 50px;
+			
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+			
+			max-width: 500px;
+
+			button {
+				all: unset;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				background-color: var(--button-bg);
+				border-radius: 10px;
+				
+				width: 100px;
+				height: 100px;
+
+				transition: background-color var(--trans-duration);
+
+				svg {
+					transition: all var(--trans-duration);
+
+					path, circle, rect {
+						transition: all var(--trans-duration);
+					}
+					
+					width: 30%;
+					height: 30%;
+				}
+			}
+
+			.outlook, .canvas, .onedrive, .github, .gmail {
+				fill: var(--button-fg);
+
+				path {
+					fill: var(--button-fg);
+				}
+			}
+
+			.gmail {
+				stroke: var(--button-fg);
+			}
+
+			.calendar, .house{
+				path {					
+					stroke: var(--button-fg);
+				}
+			}
+
+			.teams {
+				path {
+					fill: var(--button-fg);
+				}
+				
+				path, circle, rect {
+					stroke: var(--button-fg);
+				}
+			}
+
+			button:hover {
+				cursor: pointer;
+				background-color: var(--button-hvr);
+			}
+
+			.outlook:hover {
+				background-color: #0364B8; 
+			}
+
+			.calendar:hover {
+				background-color: #6da839;
+			}
+
+			.canvas:hover {
+				background-color: #900;
+			}
+
+			.onedrive:hover {
+				background-color: #28A8EA;
+			}
+
+			.github:hover {
+				background-color: #9A88D2;
+			}
+
+			.teams:hover {
+				background-color: #5831c4;
+			}
+
+			.house:hover {
+				background-color: #dd883e;
+			}
+
+			.gmail:hover {
+				background-color: #e2ad0b;
+				stroke: white;
+			}
+
+			.canvas:hover, .outlook:hover, .onedrive:hover, .github:hover, .gmail:hover {
+				path {
+					fill: white;
+				}
+			}
+
+			.teams:hover {
+				path {
+					fill: white;
+				}
+				
+				path, circle, rect {
+					stroke: white;
+				}
+			}
+
+			.calendar:hover, .house:hover{
+				path {					
+					stroke: white;
+				}
+			}
+
+
+		}
+	}
+}
