@@ -1,15 +1,46 @@
 :root {
-	--bg-color: #ffffff;
+	--bg-color:   #ffffff;
+	--button-bg:  #CCCCCC;
+	--button-fg:  #2E3440;
+	--button-hvr: #000;
 
+	--title-fire1: #ffe341;
+	--title-fire2: #fd3149;
+	--title-fox:   #e7056f;
+	--subtitle:         #444;
+	--subtitle-freaky1: #ac2fd8;
+	--subtitle-freaky2: #6863e8; 
+	
+	--outlook:  #47a1ef; 
+	--calendar: #84c649;
+	--canvas:   #ea7070;
+	--onedrive: #97c4db;
+	--github:   #e190f9;
+	--teams:    #ac90f9;
+	--house:    #dd883e;
+	--gmail:    #e2ad0b;
+	
+	--focus: #5294E2;
 	--trans-duration: 0.2s;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg-color: #1C1B22;
+		--bg-color:  #1C1B22;
 		--button-bg: #2E3440;
 		--button-fg: #A2A5AA;
-		--button-hvr: #CCCCCC;
+		--button-hvr:#FFF;
+
+		--subtitle: #888;
+
+		--outlook:  #0364B8;
+		--calendar: #107f08;
+		--canvas:   #990000;
+		--onedrive: #28A8EA;
+		--github:   #9A88D2;
+		--teams:    #5831c4;
+		--house:    #c96d1c;
+		--gmail:    #709307;
 	}
 }
 
@@ -31,12 +62,36 @@ body {
 		flex-direction: column;
 		align-items: center;
 		
-		.title {
-			max-width: 100%;
+		h1 {
+			color: var(--title-fox);
+			font-size: 5em;
+			font-weight: 600;
+			margin: 0;
+			font-family: 'Lexend', sans-serif;
+
+			.fire {
+				background: linear-gradient(45deg, var(--title-fire1), var(--title-fire2));
+				background-clip: text;
+				color: transparent;
+			}
 		}
 
+		h2 {
+			color: var(--subtitle);
+			font-size: 1em;
+			margin: 0;
+			font-family: 'Lexend', sans-serif;
+			
+			.freaky {
+				background: linear-gradient(45deg, var(--subtitle-freaky1), var(--subtitle-freaky2));
+				background-clip: text;
+				color: transparent;
+			}
+
+		}
+		
 		.quick-links {
-			margin-top: 50px;
+			margin-top: 40px;
 			
 			display: flex;
 			flex-wrap: wrap;
@@ -45,10 +100,11 @@ body {
 			
 			max-width: 500px;
 
-			button {
+			a {
 				all: unset;
 
 				display: flex;
+				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 
@@ -69,6 +125,13 @@ body {
 					
 					width: 30%;
 					height: 30%;
+				}
+
+				p {
+					margin: 18px 0 0;
+					color: var(--button-fg);
+					font-family: 'JetBrains Mono', monospace;
+					font-size: 10px;
 				}
 			}
 
@@ -100,63 +163,74 @@ body {
 				}
 			}
 
-			button:hover {
+			a:hover {
 				cursor: pointer;
-				background-color: var(--button-hvr);
-			}
 
-			.outlook:hover {
-				background-color: #0364B8; 
-			}
-
-			.calendar:hover {
-				background-color: #6da839;
-			}
-
-			.canvas:hover {
-				background-color: #900;
-			}
-
-			.onedrive:hover {
-				background-color: #28A8EA;
-			}
-
-			.github:hover {
-				background-color: #9A88D2;
-			}
-
-			.teams:hover {
-				background-color: #5831c4;
-			}
-
-			.house:hover {
-				background-color: #dd883e;
-			}
-
-			.gmail:hover {
-				background-color: #e2ad0b;
-				stroke: white;
-			}
-
-			.canvas:hover, .outlook:hover, .onedrive:hover, .github:hover, .gmail:hover {
-				path {
-					fill: white;
+				p {
+					color: var(--button-hvr);
 				}
 			}
 
-			.teams:hover {
+			a:focus {
+				outline: solid 3px var(--focus);
+
+				p {
+					color: var(--button-hvr);
+				}
+			}
+
+			.outlook:hover, .outlook:focus {
+				background-color: var(--outlook); 
+			}
+
+			.calendar:hover, .calendar:focus {
+				background-color: var(--calendar);
+			}
+
+			.canvas:hover, .canvas:focus {
+				background-color: var(--canvas);
+			}
+
+			.onedrive:hover, .onedrive:focus {
+				background-color: var(--onedrive);
+			}
+
+			.github:hover, .github:focus {
+				background-color: var(--github);
+			}
+
+			.teams:hover, .teams:focus {
+				background-color: var(--teams);
+			}
+
+			.house:hover, .house:focus {
+				background-color: var(--house);
+			}
+
+			.gmail:hover, .gmail:focus {
+				background-color: var(--gmail);
+				stroke: var(--button-hvr);
+			}
+
+			.canvas:hover, .canvas:focus, .outlook:hover, .outlook:focus, .onedrive:hover, .onedrive:focus, .github:hover, .github:focus, .gmail:hover, .gmail:focus {
 				path {
-					fill: white;
+					fill: var(--button-hvr);
+				}
+			}
+
+			.teams:hover, .teams:focus {
+				path {
+					fill: var(--button-hvr);
 				}
 				
 				path, circle, rect {
-					stroke: white;
+					stroke: var(--button-hvr);
 				}
 			}
 
-			.calendar:hover, .house:hover{
+			.calendar:hover, .calendar:focus, .house:hover, .house:focus{
 				path {					
-					stroke: white;
+					stroke: var(--button-hvr);
 				}
 			}
 

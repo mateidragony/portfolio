@@ -14,25 +14,38 @@ const links = {
 	'teams' : ['https://teams.microsoft.com']
 }
 
-for (const b of document.querySelectorAll('.quick-links button')) {
-	b.onclick = () => {
-		const classLinks = links[b.classList[0]]
-		if (classLinks.length == 1) {
-			window.location.href = classLinks[0]
-		} else {
+const buttons = document.querySelectorAll('.quick-links a') 
+const keys = new Set()
+
+for (let i = 0; i != buttons.length; ++i) {
+	const b = buttons[i]
+	const classLinks = links[b.classList[0]]
+	if (classLinks.length == 1) {
+		b.href = classLinks[0]
+	} else {
+		b.href = '.'
+		b.onclick = () => {
 			for (const link of classLinks) {
 				window.open(link)
 			}
 		}
 	}
+	// const label = document.createElement('p')
+	// label.innerHTML = `C-${i+1}`
+	// b.appendChild(label)
 }
 
-// Titles logic
-const numTitles = 4
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // dark mode
-	document.querySelector('.title').src = `titles/dark/${Math.floor(Math.random() * numTitles)}.gif`
-} else {
-	// light mode
-	document.querySelector('.title').src = `titles/light/${Math.floor(Math.random() * numTitles)}.gif`
+window.onkeyup = (e) => {
+	keys.delete(e.key)
+}
+
+window.onkeydown = (e) => {
+	keys.add(e.key)
+	if (keys.has('Control')) {
+		for (let i = 0; i != buttons.length; ++i) {
+			if (keys.has(`${i+1}`)) {
+				buttons[i].focus();
+			}
+		}
+	}
 }
