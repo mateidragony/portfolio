@@ -1,5 +1,5 @@
 # Deploying static web content to GitHub Pages
-name: Build and deploy to GH Pages
+name: 🚀 Build and deploy to GH Pages
 
 on:
   # automatic on main
@@ -45,7 +45,7 @@ jobs:
       # Generate resume html
       - name: Generate resume
         run: |
-          cd common/resume
+          cd extra/resume
           python generate_resume.py
           cd ../..
 

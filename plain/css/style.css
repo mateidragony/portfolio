@@ -2,6 +2,10 @@
 This may be plain html but come on. I need some sort of structure...
 */
 
+html {
+	background-color: white;
+}
+
 .hidden {
 	display: none;
 }

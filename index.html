@@ -1,15 +1,140 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="description" content="My personal portfolio. Come and say hi!" />
+    <meta name="keywords" content="Matei, Cloteaux, Portfolio">
+    <meta name="author" content="Matei Cloteaux">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>Matei Cloteaux</title>
+
+	<!-- Social cards -->
+	<meta property="og:url" content="https://www.mateicloteaux.com" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Matei Cloteaux" />
+    <meta property="og:description" content="My personal portfolio. Come and say hi!" />
+    <meta property="og:site_name" content="Matei Cloteaux">
+    <meta property="og:image" content="https://www.mateicloteaux.com/common/assets/long-logo.svg" />
+	
+	<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Matei Cloteaux">
+    <meta name="twitter:description" content="My personal portfolio. Come and say hi!">
+    <meta name="twitter:image" content="https://www.mateicloteaux.com/common/assets/long-logo.svg">
+
+	<!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/7005573326.js" crossorigin="anonymous"></script>
+	
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 </head>
 
-<body>
-	<script>
-	 window.location.href = "plain"
-	</script>
+<body class="fade-in">
+	<div class="transition-circle" aria-hidden="true"></div>
+	
+	<header>
+		<div>
+			<a href=".">Mat&eacute;i Cloteaux</a>
+		</div>
+		<div class="links">
+			<a target="_blank" title="GitHub" href="https://github.com/mateidragony"><i class="fa-brands fa-github"></i></a>
+			<a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/matei-cloteaux/"><i class="fa-brands fa-linkedin"></i></a>
+
+			<div class="color-theme">
+				<button>
+					<div class="theme-label">
+						<svg class="color-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+							fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="lucide lucide-moon mr-1 size-5">
+							<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+						</svg>
+						Dark
+					</div>
+					<svg class="arrows" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="m7 15 5 5 5-5"></path>
+						<path d="m7 9 5-5 5 5"></path>
+					</svg>
+				</button>
+			
+				<div class="theme-options">
+					<div class="theme-label" id="dark">
+						<svg class="color-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+							fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+						</svg>
+						Dark
+					</div>
+					<div class="theme-label" id="light">
+						<svg class="color-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+							fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="4"></circle>
+							<path d="M12 2v2"></path>
+							<path d="M12 20v2"></path>
+							<path d="m4.93 4.93 1.41 1.41"></path>
+							<path d="m17.66 17.66 1.41 1.41"></path>
+							<path d="M2 12h2"></path>
+							<path d="M20 12h2"></path>
+							<path d="m6.34 17.66-1.41 1.41"></path>
+							<path d="m19.07 4.93-1.41 1.41"></path>
+						</svg>
+						Light
+					</div>
+					<div class="theme-label" id="sepia">
+						<svg class="color-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor">
+							<path
+								d="M512 320C512 214 426 128 320 128L320 512C426 512 512 426 512 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320z" />
+						</svg>
+						Sepia
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<section class="info">
+		<figure class="intro">
+			<h1 class="name">Hello! I'm Mat&eacute;i.</h1>
+			<h1>Welcome to my website.</h1>
+			<p>
+				I have a slight problem. I really can't decide how I want my site to look like.
+				What I have here instead of my base portfolio are all the different ideas I had
+				for my site. I hope that you may find joy in at least one of my designs. And don't
+				worry, the content of each page is basically the exact same. Enjoy!
+			</p>
+		</figure>
+		<figure class="portrait">
+			<img src="common/assets/me.jpg"
+				alt="Matei standing in front of a brick wall wearing a navy blue button up shirt with one too many top buttons unbuttoned." />
+		</figure>
+	</section>
+
+	<section class="pages">
+		<h2 class="title">Same content. <span>Different style.</span></h2>
+		<p class="subtitle">Kinda like <a target="_blank" href="https://csszengarden.com/">CSS Zen Garden</a>, if you know it.</p>
+		<button class="lucky">
+			<svg fill="currentColor" width="800px" height="800px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M 26.6875 12.6602 C 26.9687 12.6602 27.1094 12.4961 27.1797 12.2383 C 27.9062 8.3242 27.8594 8.2305 31.9375 7.4570 C 32.2187 7.4102 32.3828 7.2461 32.3828 6.9648 C 32.3828 6.6836 32.2187 6.5195 31.9375 6.4726 C 27.8828 5.6524 28.0000 5.5586 27.1797 1.6914 C 27.1094 1.4336 26.9687 1.2695 26.6875 1.2695 C 26.4062 1.2695 26.2656 1.4336 26.1953 1.6914 C 25.3750 5.5586 25.5156 5.6524 21.4375 6.4726 C 21.1797 6.5195 20.9922 6.6836 20.9922 6.9648 C 20.9922 7.2461 21.1797 7.4102 21.4375 7.4570 C 25.5156 8.2774 25.4687 8.3242 26.1953 12.2383 C 26.2656 12.4961 26.4062 12.6602 26.6875 12.6602 Z M 15.3438 28.7852 C 15.7891 28.7852 16.0938 28.5039 16.1406 28.0821 C 16.9844 21.8242 17.1953 21.8242 23.6641 20.5821 C 24.0860 20.5117 24.3906 20.2305 24.3906 19.7852 C 24.3906 19.3633 24.0860 19.0586 23.6641 18.9883 C 17.1953 18.0977 16.9609 17.8867 16.1406 11.5117 C 16.0938 11.0899 15.7891 10.7852 15.3438 10.7852 C 14.9219 10.7852 14.6172 11.0899 14.5703 11.5352 C 13.7969 17.8164 13.4687 17.7930 7.0469 18.9883 C 6.6250 19.0821 6.3203 19.3633 6.3203 19.7852 C 6.3203 20.2539 6.6250 20.5117 7.1406 20.5821 C 13.5156 21.6133 13.7969 21.7774 14.5703 28.0352 C 14.6172 28.5039 14.9219 28.7852 15.3438 28.7852 Z M 31.2344 54.7305 C 31.8438 54.7305 32.2891 54.2852 32.4062 53.6524 C 34.0703 40.8086 35.8750 38.8633 48.5781 37.4570 C 49.2344 37.3867 49.6797 36.8945 49.6797 36.2852 C 49.6797 35.6758 49.2344 35.2070 48.5781 35.1133 C 35.8750 33.7070 34.0703 31.7617 32.4062 18.9180 C 32.2891 18.2852 31.8438 17.8633 31.2344 17.8633 C 30.6250 17.8633 30.1797 18.2852 30.0860 18.9180 C 28.4219 31.7617 26.5938 33.7070 13.9140 35.1133 C 13.2344 35.2070 12.7891 35.6758 12.7891 36.2852 C 12.7891 36.8945 13.2344 37.3867 13.9140 37.4570 C 26.5703 39.1211 28.3281 40.8321 30.0860 53.6524 C 30.1797 54.2852 30.6250 54.7305 31.2344 54.7305 Z" />
+			</svg>
+			<p>I'm feeling lucky</p>
+		</button>
+
+		<div class="page-blocks">
+			<!-- Injected by js/main.js -->
+		</div>
+	</section>
+
+	<script src="./common/js/utils.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

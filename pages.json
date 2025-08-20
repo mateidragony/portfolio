@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Plain HTML",
+		"description": "A base HTML page. No bells or whistles, just straight up content.",
+		"image": "plain.png",
+		"link": "plain"
+	},
+	{
+		"title": "Eyesore",
+		"description": "I mean, the name is pretty self explanatory... Be careful with this one.",
+		"image": "eyesore.png",
+		"link": "eyesore"
+	}
+]
