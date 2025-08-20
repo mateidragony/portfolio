@@ -14,8 +14,16 @@ Site content can be written down in one or multiple
 json files. Each iteration of pages will grab that
 content and display it however it chooses
 
-* TODO Switching between site page styles
+* IN-PROGRESS Switching between site page styles
 
+- State "IN-PROGRESS" from "TODO"       [2025-08-20 Wed 12:03] \\
+  So theres a homepage where you can select which page you
+  want to go to. I dont know if specific pages should have
+  a link bringing you back to the homepage. Maybe just rely
+  on users using browser back arrows?
+
+  Leaving as in progress for now...
+  
 * Site page ideas:
 Some ideas for the site pages
 
@@ -35,13 +43,17 @@ An old timey computer were each page is a desktop
 app and you open them in small windows. Could be
 based off of Windows XP or Windows 95.
 
-** IN-PROGRESS Ugly as hell
+** DONE Ugly as hell
+CLOSED: [2025-08-20 Wed 12:02]
+- State "DONE"       from "IN-PROGRESS" [2025-08-20 Wed 12:02]
 - State "IN-PROGRESS" from "TODO"       [2025-06-15 Sun 23:29] \\
   Just starting. Mostly scared to do legit ones...
 Just a really ugly site. Terrible corlors. The
 background is a repeated picture of my face.
 
-*** TODO Moving images
+*** DONE Moving images
+CLOSED: [2025-08-20 Wed 12:02]
+- State "DONE"       from "TODO"       [2025-08-20 Wed 12:02]
 Images that appear and bounce arounf the screen.
 They disappear when you click on them, but if you
 misclick, more appear.
