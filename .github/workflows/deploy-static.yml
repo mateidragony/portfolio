@@ -38,7 +38,7 @@ jobs:
 
       # Install apt dependencies
       - name: Install apt dependencies
-        run: sudo apt-get install -y wkhtmltopdf
+        run: sudo apt-get install -y --fix-missing wkhtmltopdf
         
       # Install python dependencies
       - name: Install python dependencies
