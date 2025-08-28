@@ -38,8 +38,8 @@ jobs:
 
       # Install apt dependencies
       - name: Install apt dependencies
-        run: sudo apt install -y wkhtmltopdf
-          
+        run: sudo apt-get install -y wkhtmltopdf
+        
       # Install python dependencies
       - name: Install python dependencies
         run: |
