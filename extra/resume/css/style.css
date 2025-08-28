@@ -100,6 +100,15 @@ section {
     figure.title {
         margin: var(--title-top-margin) 0 var(--title-bottom-margin);
 
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+		
         p, strong, em, span {
             font-size: var(--title-size);
         }

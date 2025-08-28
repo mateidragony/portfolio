@@ -7,6 +7,7 @@ from markdown.treeprocessors import Treeprocessor
 
 import pdfkit
 
+import sys
 import re
 import os
 
@@ -48,7 +49,7 @@ class ResumeExtension(Extension):
     def extendMarkdown(self, md):
         md.preprocessors.register(ResumePreprocessor(), 'resume-pre', 9999)
 
-prelude = '''
+prelude = lambda stylesheet: f'''
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +57,7 @@ prelude = '''
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Resume</title>
+    <title>Matei Cloteaux Resume</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +66,7 @@ prelude = '''
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
 
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/{stylesheet}.css">
     
 </head>
 
@@ -80,10 +81,18 @@ conclusion = '''
 
 
 if __name__ == '__main__':
+
+    stylesheet = 'style'
+    if '--local' in sys.argv:
+        import sass
+        with open('css/style-local.css', 'w') as f:
+            f.write(sass.compile(filename='css/style.css'))
+        stylesheet = 'style-local'
+        
     print('Reading markdown')
     with open('resume.md', 'r') as f:
         text = f.read()
-        html = prelude
+        html = prelude(stylesheet)
         html += markdown.markdown(text, extensions=['toc', 'md_in_html', ResumeExtension()])
         html += conclusion
 
@@ -106,5 +115,5 @@ if __name__ == '__main__':
         'page-size' : 'Letter',
         'enable-local-file-access': True
     }
-    pdfkit.from_file("resume.html", "resume.pdf", verbose=True, options=pdf_options)
+    pdfkit.from_file("resume.html", "MateiCloteauxResume.pdf", verbose=True, options=pdf_options)
     
