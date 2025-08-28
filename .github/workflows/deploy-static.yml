@@ -53,7 +53,7 @@ jobs:
       - name: Generate resume
         run: |
           cd extra/resume
-          pysassc css/style.css
+          pysassc css/style.css css/style.css
           python generate_resume.py
           cd ../..
 
