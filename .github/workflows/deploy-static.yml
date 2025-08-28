@@ -38,7 +38,7 @@ jobs:
 
       # Install wkhtmltopdf for pdfkit
       - name: Install wkhtmltopdf
-      - uses: awalsh128/cache-apt-pkgs-action@latest
+        uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           packages: wkhtmltopdf
           version: 1.0
