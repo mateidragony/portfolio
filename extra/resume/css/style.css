@@ -2,18 +2,19 @@
     --font: "Computer Modern Serif", serif;
 
     /* font sizes */
-    --name-size:       30px;
-    --section-size:    18px;
-    --title-size:      16px;
-    --sub-title-size:  15px;
-    --text-size:       14px;
-    --sub-text-size:   13px;
+    --name-size:       40px;
+    --section-size:    22px;
+    --title-size:      20px;
+    --sub-title-size:  19px;
+    --text-size:       17px;
+    --sub-text-size:   16px;
 
     /* margins */
+	--page-width:            900px;
     --top-margin:            30px;
     --header-margin:         2px;
-    --section-margin:        5px;
-    --section-label-margin:  4px;
+    --section-margin:        9px;
+    --section-label-margin:  6px;
     --sub-title-margin:      1px;
     --title-top-margin:      6px;
     --title-bottom-margin:   2px;
@@ -30,7 +31,7 @@
 }
 
 .container {
-    max-width: 800px;
+    max-width: var(--page-width);
     margin: 0 auto;
 
     padding: 0 50px;

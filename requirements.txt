@@ -1,3 +1,4 @@
 markdown==3.7
 libsass==0.23.0
 yattag==1.16.1
+pdfkit==1.0.0

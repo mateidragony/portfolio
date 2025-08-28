@@ -1,10 +1,11 @@
 from yattag import indent
 
-
 import markdown
 from markdown import Extension
 from markdown.preprocessors import Preprocessor
 from markdown.treeprocessors import Treeprocessor
+
+import pdfkit
 
 import re
 import os
@@ -56,7 +57,6 @@ prelude = '''
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Resume</title>
-    <link rel="icon" type="image/x-icon" href="./assets/paper-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,14 +78,16 @@ conclusion = '''
 
 </html>'''
 
+
 if __name__ == '__main__':
+    print('Reading markdown')
     with open('resume.md', 'r') as f:
         text = f.read()
         html = prelude
         html += markdown.markdown(text, extensions=['toc', 'md_in_html', ResumeExtension()])
         html += conclusion
 
-
+    print('Writing html')
     with open('resume.html', 'w') as f:
         html = indent(
             html,
@@ -94,3 +96,15 @@ if __name__ == '__main__':
             indent_text = True
         )
         f.write(html)
+
+    print('Writing pdf')
+    pdf_options = {
+        'margin-top': '0',
+        'margin-right': '0',
+        'margin-bottom': '0',
+        'margin-left': '0',
+        'page-size' : 'Letter',
+        'enable-local-file-access': True
+    }
+    pdfkit.from_file("resume.html", "resume.pdf", verbose=True, options=pdf_options)
+    

@@ -25,16 +25,6 @@ Intro to Operating Systems
 
 ## Experience
 
-**TechStart Intern** &#124; May 2025 &ndash; Present
-
-Liberty Mutual &#124; Indianapolis, IN
-
-- Lead efforts to modernize CI/CD infrastructure by migrating deployment pipelines 
-from Bamboo to GitHub Actions in order to create a unified, efficient, and secure
-software delivery process across the organization.
-- Develop and test automated workflows, enhancing build and deployment 
-speed for internal applications.
-
 **Managing Editor of Digital** &#124; December 2023 &ndash; Present
 
 Indiana Daily Student &#124; Bloomington, IN
@@ -46,6 +36,16 @@ initiatives.
 to ensure impactful narratives.
 - Engage with the development team to foster innovation and elevate the IDS 
 digital presence.
+
+**TechStart Intern** &#124; May 2025 &ndash; August 2025
+
+Liberty Mutual &#124; Indianapolis, IN
+
+- Lead efforts to modernize CI/CD infrastructure by migrating deployment pipelines 
+from Bamboo to GitHub Actions in order to create a unified, efficient, and secure
+software delivery process across the organization.
+- Develop and test automated workflows, enhancing build and deployment 
+speed for internal applications.
 
 **TechStart Intern** &#124; May 2024 &ndash; August 2024
 
@@ -86,7 +86,7 @@ manual effort by 60% and increase user engagement through interactive tutorials 
 live coding features. Integrate Deduce with VS Code and Emacs, improving the developer 
 experience for users with enhanced editor support.
 - Collaborate with a team of 4 developers to implement new functionality to
-expanded Deduce’s use in educational settings, benefiting 100+ students. 
+expanded Deduce’s use in educational settings, benefiting 200+ students. 
 
 **Mega Puzzle** | *HTML, CSS, JavaScript, Bootstrap, Cloudflare* &#124; August 2023 &ndash; April 2024
 
