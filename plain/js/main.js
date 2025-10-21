@@ -36,7 +36,7 @@ document.querySelector('#test').onclick = async (e) => {
 		if (navigator.share) {
 			await navigator.share({
 				title: "IDGuess",
-				url: "www.mateicloteaux.com",
+				url: "plain",
 				text: shareText
 			});
 		} else if (navigator.clipboard) {
