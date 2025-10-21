@@ -24,3 +24,26 @@
 	
 	document.querySelector('.loader').classList.add('hidden')
 })()
+
+
+document.querySelector('#test').onclick = async (e) => {
+	const shareText = `IDGuess 1 2/6
+
+🔴🔴🔴🔴🔴
+🟡🟡🔴⚫🟡`
+
+	try {
+		if (navigator.share) {
+			await navigator.share({
+				title: "IDGuess",
+				url: "www.mateicloteaux.com",
+				text: shareText
+			});
+		} else if (navigator.clipboard) {
+			navigator.clipboard.writeText(shareText)
+		} else {
+		}
+	} catch (e) {
+		console.error(e)
+	}
+}

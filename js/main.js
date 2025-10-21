@@ -100,30 +100,3 @@ window.onload = () => {
 	})
 }
 
-
-
-document.querySelector('#test').onclick = async (e) => {
-	const shareText = `IDGuess 1 2/6
-
-🔴🔴🔴🔴🔴
-🟡🟡🔴⚫🟡
-`
-
-	try {
-		if (navigator.share) {
-			await navigator.share({
-				title: "IDGuess",
-				url: "www.mateicloteaux.com",
-				text: shareText
-			});
-		} else if (navigator.clipboard) {
-			navigator.clipboard.writeText(shareText)
-			notify('Copied results to clipboard')
-		} else {
-			notify('Something went wrong')
-		}
-	} catch (e) {
-		notify('Something went wrong')
-		console.error(e)
-	}
-}
