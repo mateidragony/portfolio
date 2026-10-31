@@ -5,8 +5,8 @@
 	await injectImage(document.querySelector('.headshot'))
 	injectBlurb(document.querySelector('.blurb'))
 
-	about.links.push({'link' : `${baseUrl()}/extra/resume/resume.html`, 'text' : 'Resume (html)'})
-	about.links.push({'link' : `${baseUrl()}/extra/resume/MateiCloteauxResume.pdf`, 'text' : 'Resume (pdf)'})	
+	about.links.push({'link' : RESUME_HTML_LINK, 'text' : 'Resume (html)'})
+	about.links.push({'link' : RESUME_PDF_LINK, 'text' : 'Resume (pdf)'})	
 
 	injectLinks(document.querySelector('.links'))
 	

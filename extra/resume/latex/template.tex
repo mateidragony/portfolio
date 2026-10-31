@@ -1,0 +1,86 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[top=<<TOP_MARGIN>>, bottom=<<BOTTOM_MARGIN>>, left=<<LEFT_MARGIN>>, right=<<RIGHT_MARGIN>>]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+
+\setlength{\footskip}{5pt}
+\pagestyle{empty}
+\setlength{\footskip}{5pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% make a command similar to css flex where theres text in the right and left
+% right text right jutified and left text left justified
+\newcommand{\flexText}[2]{
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    #1 & #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \flexText{#1}{#2}
+  \flexText{\textit{\small #3}}{\textit{\small #4}}
+}
+
+\newcommand{\resumeHeading}[2]{
+  \vspace{-2pt}\item
+  \flexText{#1}{#2}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item\flexText{{\small#1}}{{\small#2}}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-9pt}}
+\newcommand{\resumeItemListStart}{\vspace{-2pt}\begin{itemize}[leftmargin=0.3in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge <<NAME>>} \\ \vspace{5pt}
+    \small <<LINKS_LATEX>>
+    \vspace{-7pt}
+  \end{center}
+
+
+<<SECTIONS_LATEX>>
+
+
+%-------------------------------------------
+\end{document}

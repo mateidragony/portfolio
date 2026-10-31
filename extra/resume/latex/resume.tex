@@ -1,0 +1,166 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[top=0.3in, bottom=0.3in, left=0.5in, right=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+
+\setlength{\footskip}{5pt}
+\pagestyle{empty}
+\setlength{\footskip}{5pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% make a command similar to css flex where theres text in the right and left
+% right text right jutified and left text left justified
+\newcommand{\flexText}[2]{
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    #1 & #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \flexText{#1}{#2}
+  \flexText{\textit{\small #3}}{\textit{\small #4}}
+}
+
+\newcommand{\resumeHeading}[2]{
+  \vspace{-2pt}\item
+  \flexText{#1}{#2}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item\flexText{{\small#1}}{{\small#2}}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-9pt}}
+\newcommand{\resumeItemListStart}{\vspace{-2pt}\begin{itemize}[leftmargin=0.3in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge Matéi Cloteaux} \\ \vspace{5pt}
+    \small \href{mailto:matei.cloteaux@gmail.com}{\underline{matei.cloteaux@gmail.com}} $|$ \href{https://www.linkedin.com/in/matei-cloteaux}{\underline{linkedin.com/in/matei-cloteaux}} $|$ \href{https://www.github.com/mateidragony}{\underline{github.com/mateidragony}}
+    \vspace{-7pt}
+  \end{center}
+
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{\textbf{Indiana University,} Bloomington, IN}{May 2026}
+{Master of Science in Computer Science}{GPA: 3.95/4.0}
+\vspace{-19pt}
+
+{\footnotesize Specialization: Programming Languages}
+\vspace{-4pt}
+\resumeSubheading
+{\textbf{Indiana University,} Bloomington, IN}{May 2025}
+{Bachelor of Science in Computer Science}{GPA: 4.0/4.0}
+\vspace{-19pt}
+
+{\footnotesize Minors: Mathematics, Informatics}
+\vspace{-4pt}
+\vspace{-4pt}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{\textbf{Managing Editor of Digital}}{December 2023 -- May 2026}
+{Indiana Daily Student}{Bloomington, IN}
+\vspace{-19pt}
+{\small \resumeItemListStart
+\resumeItem{Collaborate with a dynamic team of over 50 staffers and lead a dedicated  team of front-end web developers at the IDS to publish digital storytelling  initiatives.}
+\resumeItem{Spearhead multimedia projects, graphics coordination, and data-strategies  to ensure impactful narratives.}
+\resumeItem{Engage with the development team to foster innovation and elevate the IDS  digital presence.}
+\resumeItemListEnd}
+\resumeSubheading
+{\textbf{TechStart Intern - Cloud Engineering}}{May 2025 -- August 2025}
+{Liberty Mutual}{Indianapolis, IN}
+\vspace{-19pt}
+{\small \resumeItemListStart
+\resumeItem{Designed and implemented a React front-end integrated with an AWS Lambda API,  enabling employees to collect, filter, and retrieve PDF reports through a scalable  serverless architecture.}
+\resumeItem{Collaborated with cross-functional teams to deploy cloud-native applications using AWS services, ensuring reliability, maintainability, and alignment with organizational  security standards.}
+\resumeItem{Lead efforts to modernize CI/CD infrastructure by migrating deployment pipelines  from Bamboo to GitHub Actions for AWS Lambda repositories in order to create a unified,  efficient, and secure software delivery process across the organization.}
+\resumeItem{Developed and tested automated workflows, enhancing build and deployment  speed by up to 40\%.}
+\resumeItemListEnd}
+\resumeSubheading
+{\textbf{TechStart Intern - Data Applications}}{May 2024 -- August 2024}
+{Liberty Mutual}{Portsmouth, NH}
+\vspace{-19pt}
+{\small \resumeItemListStart
+\resumeItem{Researched and compared capabilities of Snowflake Native Apps against  customer-defined requirements, presented findings to the team and integrated  team feedback into the development process.}
+\resumeItem{Leveraged Snowflake Native Apps and Streamlit to develop a fully functional  proof-of-concept full-stack application enabling users to easily interact with  data within Snowflake via a user-friendly and accessible UI.}
+\resumeItem{Partnered with cross-functional teams to deploy the proof-of-concept  application to CloudForge utilizing Bamboo, enhancing application  accessibility for all employees within Liberty Mutual.}
+\resumeItem{Operated effectively within an Agile framework, contributing to biweekly  sprints and participating in Scrum ceremonies to ensure continuous team  alignment and efficient project delivery.}
+\resumeItemListEnd}
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/jsiek/deduce}{Deduce}} \textbar{} \emph{Python, JavaScript, HTML, CSS}}{September 2024 -- May 2026}
+\vspace{-18pt}
+{\small \resumeItemListStart
+\resumeItem{Develop and maintain the Deduce website, automating content generation to reduce  manual effort by 60\% and increase user engagement through interactive tutorials and  live coding features. Integrate Deduce with VS Code and Emacs, improving the developer  experience for users with enhanced editor support.}
+\resumeItem{Collaborate with a team of 4 developers to implement new functionality to expanded Deduce’s use in educational settings, benefiting 200+ students.}
+\resumeItemListEnd}
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Luddy-LLC/MegaPuzzle2024}{Mega Puzzle}} \textbar{} \emph{HTML, CSS, JavaScript, Bootstrap, Cloudflare}}{August 2023 -- April 2024}
+\vspace{-18pt}
+{\small \resumeItemListStart
+\resumeItem{Partnered with a team of 6 developers to design and create an engaging  web-based puzzle competition platform offering a diverse array of puzzles,  including crosswords, Sudoku, and unique challenges like deciphering unknown  languages and uncovering hidden messages in music.}
+\resumeItem{Integrated back-end functionalities powered by cloudflare to allow users to  submit answers and track user progress.}
+\resumeItem{Achieved a user base of 50 active participants through strategic  updates and community engagement.}
+\resumeItemListEnd}
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{\textbf{Languages:} Python, Racket, C, Java, JavaScript, TypeScript, Haskell, R \\
+\textbf{Web Design:} HTML, CSS, Bootstrap, Node.js, React, WordPress, Angular \\
+\textbf{Databases:} Snowflake, SQL, PostgreSQL, MongoDB \\
+\textbf{Operating Systems:} Linux, MacOS, Microsoft Windows, Unix \\
+\textbf{Proof Assistants:} Rocq, Agda, Deduce}}
+\end{itemize}
+
+
+
+
+%-------------------------------------------
+\end{document}

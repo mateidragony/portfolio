@@ -1,0 +1,23 @@
+# GitHub Actions workflow to generate the resume HTML, TEX, and PDF files from markdown
+name: 📄 Generate Resume
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Test, generate, and publish resume
+        uses: ./.github/actions/generate-resume

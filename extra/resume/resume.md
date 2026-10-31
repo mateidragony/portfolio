@@ -1,118 +1,183 @@
+<!-- resume:header -->
+<!-- resume:field name -->
 # Mat&#233;i Cloteaux
 
-<a href="mailto:matei.cloteaux@gmail.com" target="_blank">matei.cloteaux@gmail.com</a>
-<a href="https://www.linkedin.com/in/matei-cloteaux" target="_blank">linkedin.com/in/matei-cloteaux</a>
-<a href="https://www.github.com/mateidragony" target="_blank">github.com/mateidragony</a>
+<!-- resume:field contacts -->
+[matei.cloteaux@gmail.com](mailto:matei.cloteaux@gmail.com)
+[linkedin.com/in/matei-cloteaux](https://www.linkedin.com/in/matei-cloteaux)
+[github.com/mateidragony](https://www.github.com/mateidragony)
+<!-- resume:endheader -->
 
+<!-- resume:section id=education layout=entries -->
+<!-- resume:field heading -->
 ## Education
 
-**Indiana University,** Bloomington, IN &#124; May 2026
+<!-- resume:entry style=subheading body-style=footnote -->
+<!-- resume:field title-left -->
+**Indiana University,** Bloomington, IN
+<!-- resume:field title-right -->
+May 2026
 
-Master of Science in Computer Science &#124; GPA: 4.0/4.0
+<!-- resume:field subtitle-left -->
+Master of Science in Computer Science
+<!-- resume:field subtitle-right -->
+GPA: 3.95/4.0
 
-Courses: Intro to Verification, Digital Design with FPGAs, Music Information Processing
+<!-- resume:field body -->
+Specialization: Programming Languages
+<!-- Courses: Intro to Verification, Digital Design with FPGAs, Music Information Processing -->
+<!-- resume:endentry -->
 
 
-**Indiana University,** Bloomington, IN &#124; May 2025
+<!-- resume:entry style=subheading body-style=footnote -->
+<!-- resume:field title-left -->
+**Indiana University,** Bloomington, IN
+<!-- resume:field title-right -->
+May 2025
 
-Bachelor of Science in Computer Science &#124; GPA: 4.0/4.0
+<!-- resume:field subtitle-left -->
+Bachelor of Science in Computer Science
+<!-- resume:field subtitle-right -->
+GPA: 4.0/4.0
 
+<!-- resume:field body -->
 Minors: Mathematics, Informatics
 
-Courses: Data Structures & Algorithms, Intro to Algorithm Design & Analysis, 
-Intro to Operating Systems, Compilers
+<!-- Courses: Data Structures & Algorithms, Intro to Algorithm Design & Analysis, 
+Intro to Operating Systems, Compilers -->
+<!-- resume:endentry -->
+<!-- resume:endsection -->
 
 
+<!-- resume:section id=experience layout=entries -->
+<!-- resume:field heading -->
 ## Experience
 
-**Managing Editor of Digital** &#124; December 2023 &ndash; Present
+<!-- resume:entry style=subheading -->
+<!-- resume:field title-left -->
+**Managing Editor of Digital**
+<!-- resume:field title-right -->
+December 2023 -- May 2026
 
-Indiana Daily Student &#124; Bloomington, IN
+<!-- resume:field subtitle-left -->
+Indiana Daily Student
+<!-- resume:field subtitle-right -->
+Bloomington, IN
 
+<!-- resume:field body -->
 - Collaborate with a dynamic team of over 50 staffers and lead a dedicated 
-team of front-end web developers at the IDS to publish digital storytelling 
-initiatives.
+  team of front-end web developers at the IDS to publish digital storytelling 
+  initiatives.
 - Spearhead multimedia projects, graphics coordination, and data-strategies 
-to ensure impactful narratives.
+  to ensure impactful narratives.
 - Engage with the development team to foster innovation and elevate the IDS 
-digital presence.
+  digital presence.
+<!-- resume:endentry -->
 
-**TechStart Intern - Cloud Engineering** &#124; May 2025 &ndash; August 2025
+<!-- resume:entry style=subheading -->
+<!-- resume:field title-left -->
+**TechStart Intern - Cloud Engineering**
+<!-- resume:field title-right -->
+May 2025 -- August 2025
 
-Liberty Mutual &#124; Indianapolis, IN
+<!-- resume:field subtitle-left -->
+Liberty Mutual
+<!-- resume:field subtitle-right -->
+Indianapolis, IN
 
+<!-- resume:field body -->
 - Designed and implemented a React front-end integrated with an AWS Lambda API, 
-enabling employees to collect, filter, and retrieve PDF reports through a scalable 
-serverless architecture.
+  enabling employees to collect, filter, and retrieve PDF reports through a scalable 
+  serverless architecture.
 - Collaborated with cross-functional teams to deploy cloud-native applications using
-AWS services, ensuring reliability, maintainability, and alignment with organizational 
-security standards.
+  AWS services, ensuring reliability, maintainability, and alignment with organizational 
+  security standards.
 - Lead efforts to modernize CI/CD infrastructure by migrating deployment pipelines 
-from Bamboo to GitHub Actions for AWS Lambda repositories in order to create a unified, 
-efficient, and secure software delivery process across the organization.
+  from Bamboo to GitHub Actions for AWS Lambda repositories in order to create a unified, 
+  efficient, and secure software delivery process across the organization.
 - Developed and tested automated workflows, enhancing build and deployment 
-speed by up to 40%.
+  speed by up to 40%.
+<!-- resume:endentry -->
 
-**TechStart Intern - Data Applications** &#124; May 2024 &ndash; August 2024
+<!-- resume:entry style=subheading -->
+<!-- resume:field title-left -->
+**TechStart Intern - Data Applications**
+<!-- resume:field title-right -->
+May 2024 -- August 2024
 
-Liberty Mutual &#124; Portsmouth, NH
+<!-- resume:field subtitle-left -->
+Liberty Mutual
+<!-- resume:field subtitle-right -->
+Portsmouth, NH
 
+<!-- resume:field body -->
 - Researched and compared capabilities of Snowflake Native Apps against 
-customer-defined requirements, presented findings to the team and integrated 
-team feedback into the development process.
+  customer-defined requirements, presented findings to the team and integrated 
+  team feedback into the development process.
 - Leveraged Snowflake Native Apps and Streamlit to develop a fully functional 
-proof-of-concept full-stack application enabling users to easily interact with 
-data within Snowflake via a user-friendly and accessible UI.
+  proof-of-concept full-stack application enabling users to easily interact with 
+  data within Snowflake via a user-friendly and accessible UI.
 - Partnered with cross-functional teams to deploy the proof-of-concept 
-application to CloudForge utilizing Bamboo, enhancing application 
-accessibility for all employees within Liberty Mutual.
+  application to CloudForge utilizing Bamboo, enhancing application 
+  accessibility for all employees within Liberty Mutual.
 - Operated effectively within an Agile framework, contributing to biweekly 
-sprints and participating in Scrum ceremonies to ensure continuous team 
-alignment and efficient project delivery.
+  sprints and participating in Scrum ceremonies to ensure continuous team 
+  alignment and efficient project delivery.
+<!-- resume:endentry -->
 
 
-<!-- **Undergraduate Instructor** &#124; January 2023 &ndash; Present -->
-
-<!-- Indiana University &#124; Bloomington, IN -->
-
-<!-- - Collaborate with professors and instructors in planning and instruction for  -->
-<!-- undergraduate courses throughout the Luddy School of Informatics Computing and -->
-<!--  Engineering. -->
-<!-- - Plan and coordinate lab sessions and office hours for over 30 students  -->
-<!-- weekly to review class content and practically apply and complement topics  -->
-<!-- and problems covered during lectures. -->
+<!-- resume:endsection -->
 
 
+<!-- resume:section id=projects layout=entries -->
+<!-- resume:field heading -->
 ## Projects
 
-**<a href="https://github.com/jsiek/deduce" target="_blank">Deduce</a>** | *Python, JavaScript, HTML, CSS* &#124; September 2024 &ndash; Present
+<!-- resume:entry style=project -->
+<!-- resume:field title-left -->
+**[Deduce](https://github.com/jsiek/deduce)** | *Python, JavaScript, HTML, CSS*
+<!-- resume:field title-right -->
+September 2024 -- May 2026
 
+<!-- resume:field body -->
 - Develop and maintain the Deduce website, automating content generation to reduce 
-manual effort by 60% and increase user engagement through interactive tutorials and 
-live coding features. Integrate Deduce with VS Code and Emacs, improving the developer 
-experience for users with enhanced editor support.
+  manual effort by 60% and increase user engagement through interactive tutorials and 
+  live coding features. Integrate Deduce with VS Code and Emacs, improving the developer 
+  experience for users with enhanced editor support.
 - Collaborate with a team of 4 developers to implement new functionality to
-expanded Deduce’s use in educational settings, benefiting 200+ students. 
+  expanded Deduce’s use in educational settings, benefiting 200+ students. 
+<!-- resume:endentry -->
 
-**<a href="https://github.com/Luddy-LLC/MegaPuzzle2024" target="_blank">Mega Puzzle</a>** | *HTML, CSS, JavaScript, Bootstrap, Cloudflare* &#124; August 2023 &ndash; April 2024
+<!-- resume:entry style=project -->
+<!-- resume:field title-left -->
+**[Mega Puzzle](https://github.com/Luddy-LLC/MegaPuzzle2024)** | *HTML, CSS, JavaScript, Bootstrap, Cloudflare*
+<!-- resume:field title-right -->
+August 2023 -- April 2024
 
+<!-- resume:field body -->
 - Partnered with a team of 6 developers to design and create an engaging 
-web-based puzzle competition platform offering a diverse array of puzzles, 
-including crosswords, Sudoku, and unique challenges like deciphering unknown 
-languages and uncovering hidden messages in music.
+  web-based puzzle competition platform offering a diverse array of puzzles, 
+  including crosswords, Sudoku, and unique challenges like deciphering unknown 
+  languages and uncovering hidden messages in music.
 - Integrated back-end functionalities powered by cloudflare to allow users to 
-submit answers and track user progress.
+  submit answers and track user progress.
 - Achieved a user base of 50 active participants through strategic 
-updates and community engagement.
+  updates and community engagement.
+<!-- resume:endentry -->
+<!-- resume:endsection -->
 
+<!-- resume:section id=technical-skills layout=skills -->
+<!-- resume:field heading -->
 ## Technical Skills
 
-**Languages:** Python, Racket, C, C++, Java, JavaScript, TypeScript, Haskell, R, PHP
+<!-- resume:field body -->
+**Languages:** Python, Racket, C, Java, JavaScript, TypeScript, Haskell, R
 
 **Web Design:** HTML, CSS, Bootstrap, Node.js, React, WordPress, Angular
 
 **Databases:** Snowflake, SQL, PostgreSQL, MongoDB
 
-**Operating Systems:** Microsoft Windows, Linux, Unix, MacOS
+**Operating Systems:** Linux, MacOS, Microsoft Windows, Unix
 
-**Proof Assistants:** Coq, Agda, Deduce
+**Proof Assistants:** Rocq, Agda, Deduce
+<!-- resume:endsection -->

@@ -1,0 +1,10 @@
+# python cache
+__pycache__/
+*.py[cod]
+
+# python venv
+venv/
+.venv/
+
+# vscode latex workshop
+latex-workshop/
